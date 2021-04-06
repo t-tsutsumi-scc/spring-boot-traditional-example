@@ -1,0 +1,45 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: N/A
+      changes:
+        - createTable:
+            tableName: jma_area
+            columns:
+              - column:
+                  name: area_code
+                  type: varchar(6)
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: pref_name
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: area_name
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+        - createTable:
+            tableName: jma_api_log
+            columns:
+              - column:
+                  name: timestamp
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - column:
+                  name: client_ip_address
+                  type: varchar(39)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: area_code
+                  type: varchar(6)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: user_agent
+                  type: varchar(255)

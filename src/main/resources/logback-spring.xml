@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE logback>
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <springProfile name="!production">
+                <pattern>%-5p %d{HH:mm:ss.SSS} [%t] %c{0} - %m%n</pattern>
+            </springProfile>
+            <springProfile name="production">
+                <pattern>%-5p %d [%t] %c{0} - %m%n</pattern>
+            </springProfile>
+        </encoder>
+    </appender>
+
+    <springProfile name="!production">
+        <logger name="app" level="DEBUG" />
+    </springProfile>
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>
