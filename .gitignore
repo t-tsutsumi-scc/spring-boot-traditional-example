@@ -72,6 +72,8 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 
 # Own configuration
+.idea/.gitignore
+.idea/libraries-with-intellij-classes.xml
 .idea/misc.xml
 .idea/vcs.xml
 
