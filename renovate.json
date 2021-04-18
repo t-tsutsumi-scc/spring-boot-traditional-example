@@ -1,5 +1,7 @@
 {
+  "enabled": true,
   "extends": [
     "config:base"
-  ]
+  ],
+  "timezone": "Asia/Tokyo"
 }
