@@ -95,7 +95,7 @@ sudo chown root:appuser /opt/spring-boot-traditional-example
     SPRING_DATASOURCE_PASSWORD=masterPassword
     ```
     * 環境変数は、アプリ設定ファイル（`src/main/resources/config/application.yml`）の値を上書きする
-    * 設定ファイルと環境変数の項目名は命名規則が異なるため、[環境変数からのバインド方法](https://spring.pleiades.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-external-config-relaxed-binding-from-environment-variables)を参考に変換する
+    * 設定ファイルと環境変数の項目名は命名規則が異なるため、[環境変数からのバインド方法](https://spring.pleiades.io/spring-boot/docs/current/reference/html/features.html#boot-features-external-config-relaxed-binding-from-environment-variables)を参考に変換する
     * `#`で始まる行はコメントとして無視される
     * バックスラッシュ(`\`)で終わる行は次の行と連結される
     * 二重引用符(`"`) を使用しない限り先頭と末尾の空白は取り除かれる
