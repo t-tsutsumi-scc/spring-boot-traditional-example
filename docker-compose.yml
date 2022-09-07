@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+  app:
+    image: ghcr.io/t-tsutsumi-scc/spring-boot-traditional-example-distroless:main
+    #restart: always
+    depends_on:
+      - db
+    ports:
+      - 8080:8080
+    environment:
+      TZ: Asia/Tokyo
+      #JAVA_OPTS: -Dhttps.proxyHost=localhost -Dhttps.proxyPort=3128
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db/app
+      SPRING_DATASOURCE_USERNAME: app
+      SPRING_DATASOURCE_PASSWORD: password
+
+  db:
+    image: postgres:14.5-bullseye
+    #restart: always
+    expose:
+      - 5432
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    environment:
+      TZ: Asia/Tokyo
+      POSTGRES_USER: app
+      POSTGRES_PASSWORD: password
+
+volumes:
+  db-data:
