@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   app:
-    image: ghcr.io/t-tsutsumi-scc/spring-boot-traditional-example-distroless:main
+    image: ghcr.io/t-tsutsumi-scc/spring-boot-traditional-example:main
     #restart: always
     depends_on:
       - db
