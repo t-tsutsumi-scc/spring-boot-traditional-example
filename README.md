@@ -155,7 +155,7 @@ PostgreSQLなら`COPY FROM`、MySQLなら`LOAD DATA`、SQL Serverなら`BULK INS
 
 **PostgreSQLのpsqlによるデータ投入例：**
 ```sql
-COPY jma_area FROM '/PATH_TO_CSV_DIR/jma_area.csv' FORMAT csv;
+\COPY jma_area FROM '/PATH_TO_CSV_DIR/jma_area.csv' WITH ( FORMAT CSV );
 ```
 
 **マスタデータのCSVファイル（`jma_area.csv`）の例：**
