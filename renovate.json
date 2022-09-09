@@ -5,7 +5,7 @@
     "config:base"
   ],
   "timezone": "Asia/Tokyo",
-  "stabilityDays": 7,
+  "stabilityDays": 3,
   "packageRules": [
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
