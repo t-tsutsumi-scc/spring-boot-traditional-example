@@ -16,7 +16,7 @@ services:
       SPRING_DATASOURCE_PASSWORD: password
 
   db:
-    image: postgres:14.9-bullseye
+    image: postgres:15.3-bullseye
     #restart: always
     expose:
       - 5432
